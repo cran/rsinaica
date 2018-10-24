@@ -1,3 +1,7 @@
+# rsinaica 0.6.0
+
+* Changed the web address of the sinaica server to use https
+
 # rsinaica 0.5.0
 
 * First release

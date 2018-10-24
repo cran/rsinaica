@@ -71,9 +71,9 @@ sinaica_param_data <- function(parameter,
                                remove_extremes = FALSE) {
   ## Argument Checking
   if (missing(start_date))
-    stop("You need to specify a start date YYYY-MM-DD", call. = FALSE)
+    stop("You need to specify a start date in YYYY-MM-DD format", call. = FALSE)
   if (missing(end_date))
-    stop("You need to specify an end date YYYY-MM-DD", call. = FALSE)
+    stop("You need to specify an end date in YYYY-MM-DD format", call. = FALSE)
   if (!is.Date(start_date))
     stop("start_date should be in YYYY-MM-DD format", call. = FALSE)
   if (!is.Date(end_date))
@@ -100,7 +100,7 @@ sinaica_param_data <- function(parameter,
          call. = FALSE)
 
   ## Query the SINAICA server for the data
-  url <-  "http://sinaica.inecc.gob.mx/lib/j/php/getData.php"
+  url <-  "https://sinaica.inecc.gob.mx/lib/j/php/getData.php"
   fd <- list(
     tabla  = if (type == "Crude") "Datos" else "DatosManuales",
     fields = "",
