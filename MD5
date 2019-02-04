@@ -1,12 +1,12 @@
-78c25ba3edde7f5f9cd40d74736af849 *DESCRIPTION
+1d960b5854ec3a8b26a13551ca10c15a *DESCRIPTION
 805128e44d8c3d027c952fc7c60a66ff *LICENSE
 5c8d2cb115af4e387df1b36fd02fb558 *NAMESPACE
-c0594fdb7348dad49c74e849ab880375 *NEWS.md
+e2f1807a701a13434c2752515705f3c6 *NEWS.md
 806837e621f74323947e98ac70586ac6 *R/data.R
 6f18c61821db5f8544da1c6e4bb221c5 *R/rsinaica.R
 d40c5418ec7b8c3936af68a532757718 *R/sinaica_param_data.R
-ae0188d83531eb66df5e639a6b275096 *R/sinaica_station_data.R
-d582ec31c1c8e81e55455e1ad5f7fe56 *R/sinaica_station_params_and_dates.R
+9f1f13c4269271d9a33e71eb25fba30f *R/sinaica_station_data.R
+d9c3197561a919effda7b45213844f04 *R/sinaica_station_params_and_dates.R
 e2abc4421bc56952c16a5d24b944ea71 *R/utils.R
 73325ccad477d56b955efc1459677dab *data/params_sinaica.rda
 565f39a767eaa71becea398239a98b74 *data/stations_sinaica.rda
