@@ -6,9 +6,9 @@
 #' \code{\link{stations_sinaica}} for a list of stations and their ids.
 #' @param type The type of data to download. One of the following:
 #' \itemize{
-#'  \item{"Crude"}{ - Crude data that has not been validated}
-#'  \item{"Validated"}{ - Validated data (may not be the most up-to-date)}
-#'  \item{"Manual"}{ - Manual data}
+#'  \item Crude - Crude data that has not been validated
+#'  \item Validated - Validated data (may not be the most up-to-date)
+#'  \item Manual - Manual data
 #' }
 #'
 #' @return a data.frame with the parameters supported by the station
@@ -51,9 +51,11 @@ sinaica_station_params <- function(station_id,
   )
   tryCatch(
     {
-      result <- POST(url,
+      result <- httr::with_config(httr::config(ssl_verifypeer = 0L), {
+        POST(url,
                      body = fd,
                      encode = "form")
+      })
       if (http_error(result))
         stop(sprintf("The request to <%s> failed [%s]",
                      url,
@@ -87,14 +89,14 @@ sinaica_station_params <- function(station_id,
 #' \code{\link{stations_sinaica}} for a list of stations and their ids.
 #' @param type The type of data to download. One of the following:
 #' \itemize{
-#'  \item{"Crude"}{ - Crude data that has not been validated}
-#'  \item{"Validated"}{ - Validated data (may not be the most up-to-date)}
-#'  \item{"Manual"}{ - Manual data}
+#'  \item Crude - Crude data that has not been validated
+#'  \item Validated - Validated data (may not be the most up-to-date)
+#'  \item Manual - Manual data
 #' }
 #'
 #' @return a vector containing the date the station started reporting
 #' and end reporting date
-#' @importFrom httr POST http_error http_type content status_code
+#' @importFrom httr POST http_error http_type content status_code with_config config
 #' @importFrom jsonlite fromJSON
 #' @export
 #'
@@ -134,9 +136,11 @@ sinaica_station_dates <- function(station_id,
 
   tryCatch(
     {
-      result <- POST(url,
-                     body = fd,
-                     encode = "form")
+      result <- httr::with_config(httr::config(ssl_verifypeer = 0L), {
+        POST(url,
+             body = fd,
+             encode = "form")
+      })
       if (http_error(result))
         stop(sprintf("The request to <%s> failed [%s]",
                      url,

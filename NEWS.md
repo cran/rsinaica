@@ -1,3 +1,7 @@
+# rsinaica 1.0.0
+
+* Use latetest version of roxygen to generate documentation
+
 # rsinaica 0.6.1
 
 * `sinaica_station_dates()` and `sinaica_param_data()` return NULL when SINAICA is down
