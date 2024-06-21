@@ -1,7 +1,7 @@
 Type: Package
 Package: rsinaica
 Title: Download Data from Mexico's Air Quality Information System
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: 
     person("Diego", "Valle-Jones", , "diego@diegovalle.net", role = c("aut", "cre"))
 Description: Easy-to-use functions for downloading air quality data from
@@ -20,8 +20,8 @@ Encoding: UTF-8
 LazyData: TRUE
 RoxygenNote: 7.3.1
 NeedsCompilation: no
-Packaged: 2024-02-07 15:50:45 UTC; diego
+Packaged: 2024-06-20 13:02:58 UTC; diego
 Author: Diego Valle-Jones [aut, cre]
 Maintainer: Diego Valle-Jones <diego@diegovalle.net>
 Repository: CRAN
-Date/Publication: 2024-02-08 08:10:07 UTC
+Date/Publication: 2024-06-21 07:20:02 UTC
